@@ -26,17 +26,22 @@ The system is designed with clean architecture, proper API design, and structure
 * FastAPI
 * SQLAlchemy
 * SQLite
+* Pydantic
 
 ---
 
 ## ⚙️ Installation & Setup
 
 ```bash
-git clone https://github.com/yourusername/finance-tracker-backend.git
+git clone https://github.com/Shubhampanwar20/finance-tracker-backend.git
 cd finance-tracker-backend
+
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
+
 pip install -r requirements.txt
+
 uvicorn app.main:app --reload
 ```
 
@@ -44,9 +49,21 @@ uvicorn app.main:app --reload
 
 ## 📡 API Endpoints
 
-* `POST /transactions` → Create transaction
+* `POST /transactions` → Create a transaction
 * `GET /transactions` → Get all transactions
 * `GET /summary` → Get financial summary
+
+---
+
+## 📊 Sample Response
+
+```json
+{
+  "total_income": 6000,
+  "total_expense": 2000,
+  "balance": 4000
+}
+```
 
 ---
 
@@ -57,23 +74,36 @@ http://127.0.0.1:8000/docs
 
 ---
 
+## 📸 Screenshots
+
+*Add your project screenshots here (Swagger UI, API testing, etc.)*
+
+---
+
 ## 🎯 Purpose
 
-This project was developed as part of a backend development assignment to demonstrate:
+This project was developed to demonstrate:
 
 * Clean Python coding practices
-* API design and structure
-* Database handling
-* Business logic implementation
+* REST API design
+* Database integration using SQLAlchemy
+* Backend architecture and business logic implementation
 
 ---
 
 ## 📌 Future Improvements
 
-* Authentication (JWT)
-* Role-based access control
-* Pagination
-* Advanced filtering
-* Deployment
+* 🔐 JWT Authentication
+* 👥 Role-based access control
+* 📄 Pagination
+* 🔍 Advanced filtering
+* ☁️ Deployment (Render / Railway)
+
+---
+
+## 👤 Author
+
+**Shubham Panwar**
+GitHub: https://github.com/Shubhampanwar20
 
 ---
